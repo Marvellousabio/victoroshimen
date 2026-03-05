@@ -27,8 +27,8 @@ const Header: React.FC = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${scrolled
-          ? 'bg-black/90 backdrop-blur-md border-b border-white/10 shadow-2xl'
-          : 'bg-black/60 backdrop-blur-sm border-b border-white/5'
+        ? 'bg-black/90 backdrop-blur-md border-b border-white/10 shadow-2xl'
+        : 'bg-black/60 backdrop-blur-sm border-b border-white/5'
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -100,16 +100,16 @@ const Header: React.FC = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="text-sm uppercase tracking-widest text-white/70 hover:text-[#D4AF37] transition-colors py-1 border-b border-white/5"
+                  onClick={() => setTimeout(() => setMenuOpen(false), 100)}
+                  className="block w-full text-sm uppercase tracking-widest text-white/70 hover:text-[#D4AF37] transition-colors py-3 border-b border-white/5"
                 >
                   {item.label}
                 </a>
               ))}
               <a
                 href="#foundation"
-                onClick={() => setMenuOpen(false)}
-                className="bg-[#D4AF37] text-black px-6 py-3 text-[10px] uppercase font-bold tracking-widest text-center hover:bg-white transition-all mt-2"
+                onClick={() => setTimeout(() => setMenuOpen(false), 100)}
+                className="block w-full bg-[#D4AF37] text-black px-6 py-4 text-[10px] uppercase font-bold tracking-widest text-center hover:bg-white transition-all mt-2"
               >
                 Connect
               </a>
