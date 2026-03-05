@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white font-body;
+  }
+  
+  h1, h2, h3, .heading-font {
+    @apply font-heading uppercase;
+  }
+}
+
+@layer utilities {
+  .stadium-glow {
+    background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.15) 0%, rgba(5, 5, 5, 0) 70%);
+  }
+  
+  .grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.05;
+    background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 10px;
+}
